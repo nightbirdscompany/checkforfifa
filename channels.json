@@ -1,24 +1,24 @@
 {
   "bangladeshi": [
     { "name": "BIOSCOPE+ (FIFA)", "icon": "📡", "sub": "🔴 ফ্রি · সারা দেশে", "url": "https://hls.diptom3ow.workers.dev/r/https%3A%2F%2Ffifa-stream-01.bioscopelive.com%2Fout%2Fv1%2F60e7608404004b1186261497b404630b%2Findex_1.m3u8" },
-    { "name": "Toffe world cup", "icon": "📰", "sub": "🔴 লাইভ", "url": "https://sports.abdullahroman276.workers.dev/live/roman368/01726686368/459.m3u8ires=1782987569~_GO=Generated~URLPrefix=aHR0cHM6Ly9wcm9kLWNkbjAxLWxpdmUudG9mZmVlbGl2ZS5jb20~Signature=AeQsclD8E49TKJaioAwFJMUnGas8vyrFS1xrDoQoYIpVkaFGVB9nWJHjO_eeWQ5uRmmQuoCmVj_sgwUqfi-Z-ci98FUD" },
-    { "name": "T SPORTS ", "icon": "🏆", "sub": "🔴 লাইভ", "url": "https://hd2.ctghub.com/T-Sports/index.m3u8 " },
+    { "name": "ToFFE world cup", "icon": "📰", "sub": "🔴 লাইভ", "url": "https://sports.abdullahroman276.workers.dev/live/roman368/01726686368/459.m3u8LWNkbjAxLWxpdmUudG9mZmVlbGl2ZS5jb20~Signature=AeQsclD8E49TKJaioAwFJMUnGas8vyrFS1xrDoQoYIpVkaFGVB9nWJHjO_eeWQ5uRmmQuoCmVj_sgwUqfi-Z-ci98FUD" },
+    { "name": "T SPORTS ", "icon": "🏆", "sub": "🔴 লাইভ", "url": "https://flussonic.deltainfonet.com/01_Tsports_HD/tracks-v1a1/mono.m3u8 " },
     { "name": "SOMOY TV FIFA", "icon": "🌊", "sub": "🔴 সংবাদ", "url": "https://live.thebosstv.com:30443/dwlive/Somoy-TV/chunks.m3u8" },
-    { "name": "i-Screen", "icon": "📡", "sub": "🔴 বিনোদন", "url": "https://tahmidx.cinemoja2.workers.dev/live/FIFA-2026-4/0/master_2000.m3u8" },
-    { "name": "TAPMAD", "icon": "🌀", "sub": "🔴 লাইভ", "url": "https://saseries.akamaized.net/hls/live/2110097/ICCt20-tapmad/level_1.m3u8" },
-    { "name": "গোপাল ভাঁড় (live stream)", "icon": "🎬", "sub": "🔴 বিনোদন", "url": "https://live20.bozztv.com/giatvplayout7/giatv-209611/tracks-v1a1/mono.ts.m3u8" }
+    { "name": "i-Screen", "icon": "📡", "sub": "🔴 বিনোদন", "url": "https://cricxtv.fun/isceen.php?file=https://tc-sg.rockstreamer.com/v1/019ed91616121ea540a8171c8e801f/019ed92ac80315fc600b1796d4ad8b/tc_sg_1_1080p.m3u8" },
+    { "name": "PTV", "icon": "🌀", "sub": "🔴 লাইভ", "url": "https://lstv-web.pages.dev/api/proxy?url=https://tv.beyondtaxconsultants.com/api/robi/lps/http://198.195.239.50:8095/ptv/tracks-v1a1/mono.m3u8" },
+    { "name": "বিটিভি (live stream)", "icon": "🎬", "sub": "🔴 বিনোদন", "url": "https://biostartvworld.pages.dev/biostartvworld.m3u?c=aHR0cHM6Ly90di5iZXlvbmR0YXhjb25zdWx0YW50cy5jb20vYXBpL3Byb3h5P3VybD1odHRwOi8vMTk4LjE5NS4yMzkuNTA6ODA5NS9idHYvdHJhY2tzLXYxYTEvbW9uby5tM3U4&ext=.m3u8" }
   ],
   "sports": [
     { "name": "SOCO LIVE FIFA ", "icon": "🏆", "url": "https://pull.niues.live/live/stream-9912108_lhd.m3u8?auth_key=1782234982-0-0-2455aafc2b9f6b9d2cd3228dabb3d198" },
     { "name": "ITC CANADA", "icon": "🎥", "url": "https://live.666666.zip/migu/1.m3u8" },
-    { "name": "korra city 720", "icon": "⚽", "url": "https://cv.kooran72.cfd/donse1_720/index.m3u8" },
-    { "name": "CORRA CiTY 360", "icon": "📡", "url": "https://cv.kooran72.cfd/donse1_360/index.m3u8" },
+    { "name": "korra city 720", "icon": "⚽", "url": "https://ou.nextsore.shop/kiiin3_720/index.m3u8" },
+    { "name": "CORRA CiTY 360", "icon": "📡", "url": "https://ou.nextsore.shop/kiiin3_360/index.m3u8" },
     { "name": "2DF FIFA", "icon": "🇨🇳", "url": "https://andro.evrenesoglu57.click/checklist/androstreamliveexn5.m3u8" },
-    { "name": "FiFA live", "icon": "⚽", "url": "https://andro.evrenesoglu57.click/checklist/androstreamliveexn3.m3u8" },
+    { "name": "BEin 1 max", "icon": "⚽", "url": "https://s3.us-east-2.amazonaws.com/cdna900/live/stream/720p/tracks-v1a1/mono.m3u8" },
     { "name": "FUSBAAL TV- 4K", "icon": "🇸🇦", "url": "https://edge22.776740.ir.cdn.ir/hls2/sport.m3u8" },
     { "name": " BEIN ARABIC ", "icon": "🎙️", "url": "https://andro.evrenesoglu57.click/checklist/androstreamliveexn4.m3u8" },
     { "name": "BeIN Sports Direct", "icon": "🏆", "url": "https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8" },
-    { "name": "CC TV 5+", "icon": "🇦🇷", "url": "https://play1.gzxdby.com/live/963237627278_2391830328_1080p.m3u8" },
+    { "name": "M6", "icon": "🇦🇷", "url": "https://tv.beyondtaxconsultants.com/api/robi/lps/http://151.80.18.177:86/M6_HD/tracks-v1a1/mono.m3u8" },
     { "name": "CORAX 90", "icon": "🇦🇷", "url": "https://1.simoplay.com/my-hls/h9asfma10d5.m3u8" },
     { "name": "Manson Sports", "icon": "🏟️", "url": "https://andro.226503.xyz/checklist/androstreamlivebs1.m3u8" },
     { "name": "Caze TV", "icon": "🇧🇷", "url": "https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/Caze_TV.m3u8" },
