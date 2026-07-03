@@ -45,5 +45,5 @@ Just edit channels.json — everything else updates automatically.
 
 ---
 
-Developer: Siam Ahmeed
+Developer: Hasan
 ```
