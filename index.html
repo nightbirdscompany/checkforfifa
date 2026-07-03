@@ -369,18 +369,6 @@ header{
 @keyframes spin{to{transform:rotate(360deg)}}
 .err{background:rgba(255,61,61,.06);border:1px solid rgba(255,61,61,.18);color:#ff8080;padding:.8rem;border-radius:10px;font-size:.78rem;text-align:center;margin:.5rem 0}
 
-/* === AD SIZE LIMIT === */
-#container-229d325123e5a3cafe751bbea9270f02 img,
-#container-229d325123e5a3cafe751bbea9270f02 a img{
-  max-height:100px !important;
-  width:100% !important;
-  object-fit:cover !important;
-}
-#container-229d325123e5a3cafe751bbea9270f02 > div{
-  max-height:120px !important;
-  overflow:hidden !important;
-}
-
 /* === TOAST === */
 .toast{
   position:fixed;bottom:5rem;left:50%;transform:translateX(-50%) translateY(40px);
@@ -503,13 +491,8 @@ header{
   .toast { font-size: 1rem; padding: .6rem 1.8rem; bottom: 6rem; }
 }
 </style>
-
-<!-- ✅ Popunder Ad -->
-<script src="https://pl29720774.effectivecpmnetwork.com/57/a6/fe/57a6fec9ee5916ab7b6d572bfbe545e5.js"></script>
 </head>
 <body>
-
-
 
 <header>
   <div class="logo">
@@ -587,15 +570,6 @@ header{
     <div class="m3u-row">
       <input id="m3u-in" type="url" placeholder="M3U URL paste করুন..."/>
       <button class="play-btn" onclick="playCustom()">▶ Play</button>
-    </div>
-
-
-
-    <!-- Native Banner Ad - Live -->
-    <div style="margin:.5rem 0 .8rem;border-radius:10px;overflow:hidden;position:relative;background:rgba(15,23,42,.5);border:1px solid rgba(30,45,66,.6);">
-      <div style="position:absolute;top:4px;right:8px;font-size:.55rem;color:#8892a4;background:#141d2e;padding:1px 5px;border-radius:4px;z-index:1;">বিজ্ঞাপন</div>
-      <script async="async" data-cfasync="false" src="https://pl29720775.effectivecpmnetwork.com/229d325123e5a3cafe751bbea9270f02/invoke.js"></script>
-      <div id="container-229d325123e5a3cafe751bbea9270f02"></div>
     </div>
 
     <div class="sec-title">📡 বাংলাদেশি চ্যানেল</div>
@@ -719,12 +693,10 @@ async function loadHome(){
 
     function getBDT(dateStr, timeStr){
       if(!timeStr) return '';
-      // timeStr format: "13:00 UTC-6" or "19:00 UTC-4"
       try{
         var m=timeStr.match(/(\d{1,2}):(\d{2})\s*UTC([+-]?\d+)?/);
         if(!m) return timeStr;
         var hh=parseInt(m[1]),mm=parseInt(m[2]),off=parseInt(m[3]||0);
-        // Convert to UTC minutes then add BDT (UTC+6)
         var totalMin=hh*60+mm - off*60 + 6*60;
         totalMin=((totalMin%1440)+1440)%1440;
         var bh=Math.floor(totalMin/60)%24, bm=totalMin%60;
@@ -735,7 +707,6 @@ async function loadHome(){
     }
 
     function grpLabel(m){
-      // m.group is already "Group A" in openfootball JSON
       if(!m.group) return m.round||'';
       return m.group;
     }
@@ -786,7 +757,6 @@ async function loadSchedule(){
     var ydStr=yd.toISOString().split('T')[0];
     var now2=new Date(); now2.setHours(0,0,0,0);
     var todayStr2=now2.toISOString().split('T')[0];
-    // Schedule: only show today onwards, exclude finished matches
     var upcoming=all.filter(function(m){
       return m.date>=todayStr2 && !(m.score&&m.score.ft);
     });
@@ -821,7 +791,6 @@ async function loadSchedule(){
       }catch(e){return '📅 '+dateStr;}
     }
 
-    // Sort by date then time
     upcoming.sort(function(a,b){
       if(a.date!==b.date) return a.date<b.date?-1:1;
       return (a.time||'').localeCompare(b.time||'');
@@ -838,7 +807,6 @@ async function loadSchedule(){
         scoreHtml='<div class="score-num">'+m.score.ft[0]+' – '+m.score.ft[1]+'</div>';
         st='<span class="status-ft">FT</span>';
       }
-      // m.group in openfootball JSON is already like "Group A" — avoid double prefix
       var grp=m.group?m.group:(m.round||'');
       html+='<div class="match-card">'
         +'<div class="match-top"><span class="match-group">'+grp+'</span>'+st+'</div>'
@@ -990,7 +958,6 @@ function matchCardTSDB(m, showVenue){
   var status = m.strStatus||'NS';
   var inPlay = status==='1H'||status==='HT'||status==='2H'||status==='Live';
   var ft = status==='FT'||status==='AOT'||status==='PEN';
-  // Convert UTC time to BD time
   var bdTime = '';
   if(m.dateEvent && m.strTime){
     try{
@@ -1071,19 +1038,15 @@ function goLive(){
 }
 
 function loadStream(url,name){
-  // Show player controls
   document.getElementById('player-ctrl').style.display='flex';
   document.getElementById('ctrl-name').textContent=name;
-  // Update currentChIdx
   if(!allChannels.length) buildChannelList();
   for(var i=0;i<allChannels.length;i++){
     if(allChannels[i].url===url){currentChIdx=i;break;}
   }
-  // If HTTP url, use proxy to bypass mixed content block
   if(url.startsWith('http://')){
     url = 'https://corsproxy.io/?' + encodeURIComponent(url);
   }
-  // Destroy old stream ASAP for faster channel switching
   if(hlsObj){hlsObj.destroy();hlsObj=null;}
   vid.src=''; vid.load();
   document.getElementById('ph').style.display='none';
@@ -1146,7 +1109,6 @@ function loadStream(url,name){
 var allChannels = [];
 var currentChIdx = -1;
 
-// Pause all non-essential animations while video plays (reduces CPU load)
 vid.addEventListener('playing', function(){document.body.classList.add('is-playing');});
 vid.addEventListener('pause', function(){document.body.classList.remove('is-playing');});
 vid.addEventListener('ended', function(){document.body.classList.remove('is-playing');});
@@ -1215,13 +1177,11 @@ async function openMatchDetail(m){
   document.getElementById('mm-content').innerHTML = '<div class="mm-loading">⏳ লোড হচ্ছে...</div>';
 
   try {
-    // Search TheSportsDB for this match
     var searchUrl = 'https://www.thesportsdb.com/api/v1/json/3/searchevents.php?e='+encodeURIComponent(home+' vs '+away)+'&s=Soccer';
     var r = await fetch(searchUrl);
     var data = await r.json();
     var events = data&&data.event ? data.event : [];
     
-    // Find matching event
     var ev = null;
     for(var i=0;i<events.length;i++){
       if(events[i].strLeague&&events[i].strLeague.toLowerCase().includes('world')){
@@ -1236,7 +1196,6 @@ async function openMatchDetail(m){
     var status = m.status==='FINISHED'?'FT':m.status==='IN_PLAY'?'🔴 LIVE':'';
     
     var html = '';
-    // Teams + Score
     html += '<div class="mm-teams">';
     html += '<div class="mm-team"><div class="mm-team-flag">'+flag(m.homeTeam.tla)+'</div><div class="mm-team-name">'+home+'</div></div>';
     html += '<div style="text-align:center"><div class="mm-score">'+hs+' – '+as+'</div><div style="font-size:.7rem;color:var(--muted)">'+grp+' · '+status+'</div></div>';
@@ -1244,16 +1203,13 @@ async function openMatchDetail(m){
     html += '</div>';
 
     if(ev){
-      // Goals/Events from TheSportsDB
       if(ev.strDescriptionEN){
         html += '<div class="mm-section">⚽ ম্যাচ বিবরণ</div>';
         html += '<div style="font-size:.78rem;color:var(--text);line-height:1.6;padding:.4rem 0">'+ev.strDescriptionEN+'</div>';
       }
-      // Lineup from TheSportsDB
       if(ev.strHomeLineupGoalkeeper||ev.strHomeLineupDefense){
         html += '<div class="mm-section">👥 লাইনআপ</div>';
         html += '<div class="lineup-grid">';
-        // Home team
         html += '<div class="lineup-team"><div class="lineup-team-name">'+home+'</div>';
         var homePlayers = [
           ev.strHomeLineupGoalkeeper,
@@ -1267,7 +1223,6 @@ async function openMatchDetail(m){
           });
         });
         html += '</div>';
-        // Away team
         html += '<div class="lineup-team"><div class="lineup-team-name">'+away+'</div>';
         var awayPlayers = [
           ev.strAwayLineupGoalkeeper,
@@ -1319,7 +1274,7 @@ function showToast(msg){
 
 loaded.home=true;
 loadHome();
-setInterval(loadHome,30000); // Auto-update every 30 seconds
+setInterval(loadHome,30000);
 </script>
 
 <!-- Analytics & Visitor Counter -->
@@ -1343,11 +1298,6 @@ setInterval(loadHome,30000); // Auto-update every 30 seconds
 
 <script data-goatcounter="https://siam-areana.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
-
-
-
-
-<!-- ✅ channels.json থেকে channel load করার system -->
 <script>
 (function(){
   fetch('channels.json?v=' + Date.now())
