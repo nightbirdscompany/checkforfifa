@@ -2,7 +2,7 @@
 
 **4K STREAMZ** is a live TV streaming website for Bangladeshi channels and World Cup 2026 matches.
 
-🌐 **Website:** [[siamahmeed563-lab.github.io/Siam-areana](https://nightbirdscompany.github.io/checkforfifa/)]
+🌐 **Website:** [[https://nightbirdscompany.github.io/checkforfifa/](https://nightbirdscompany.github.io/checkforfifa/)]
 
 ---
 
