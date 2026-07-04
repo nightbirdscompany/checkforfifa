@@ -1,55 +1,67 @@
 name: Generate playlist.m3u
 
 on:
+  schedule:
+    - cron: '0 */4 * * *'  # Run every 4 hours
+  workflow_dispatch:  # Manual trigger from GitHub UI
   push:
     paths:
       - 'channels.json'
-  workflow_dispatch:  # Allows manual trigger from GitHub UI
+      - 'generate_playlist.py'
 
 jobs:
-  build:
+  generate:
     runs-on: ubuntu-latest
     
     permissions:
-      contents: write  # Required for pushing changes
+      contents: write
     
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Fetch all history for proper commit
-          token: ${{ secrets.GITHUB_TOKEN }}  # Use the default token
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
-          cache: 'pip'  # Cache pip packages for faster runs
 
       - name: Install dependencies
         run: |
           pip install requests
 
-      - name: Generate playlist.m3u from channels.json
-        run: python3 generate_playlist.py
+      - name: Generate playlist
+        run: |
+          python3 generate_playlist.py
+          echo "Exit code: $?"
 
-      - name: Commit and push playlist.m3u
+      - name: Check if playlist was created
+        run: |
+          if [ -f "playlist.m3u" ]; then
+            echo "✅ playlist.m3u exists"
+            echo "Content preview:"
+            head -n 5 playlist.m3u
+            wc -l playlist.m3u
+          else
+            echo "❌ playlist.m3u NOT created!"
+            exit 1
+          fi
+
+      - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Check if playlist.m3u exists and has changes
-          if [ -f "playlist.m3u" ]; then
-            git add playlist.m3u
-            # Only commit if there are changes
-            if git diff --cached --quiet; then
-              echo "No changes to commit"
-            else
-              git commit -m "Auto: update playlist.m3u [skip ci]"
-              git push
-              echo "✅ Playlist updated and pushed successfully!"
-            fi
+          # Always update the file
+          git add playlist.m3u
+          
+          # Try to commit, ignore if no changes
+          if git commit -m "Auto: update playlist.m3u [skip ci]"; then
+            echo "✅ Committed successfully"
+            git push
+            echo "✅ Pushed successfully"
           else
-            echo "❌ playlist.m3u was not generated!"
-            exit 1
+            echo "ℹ️ No changes to commit"
           fi
