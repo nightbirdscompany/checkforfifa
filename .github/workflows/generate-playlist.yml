@@ -18,13 +18,13 @@ jobs:
     
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4  # Updated to v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5  # Updated to v5
         with:
           python-version: '3.x'
 
@@ -91,13 +91,13 @@ jobs:
             git commit -m "Auto: update playlist.m3u [skip ci]"
             echo "✅ Committed successfully"
             
-            # Push with token
+            # Push with token - ensure correct branch name (main or master)
             git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
             echo "✅ Pushed successfully"
           fi
 
-      - name: Upload playlist as artifact (optional)
-        uses: actions/upload-artifact@v3
+      - name: Upload playlist as artifact
+        uses: actions/upload-artifact@v4  # FIXED: Updated to v4
         with:
           name: playlist
           path: playlist.m3u
