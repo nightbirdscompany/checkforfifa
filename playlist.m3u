@@ -1,10 +1,10 @@
 #EXTM3U
 #EXTINF:-1 group-title="Bangladeshi",BIOSCOPE+ (FIFA)
-https://hls.diptom3ow.workers.dev/r/https%3A%2F%2Ffifa-stream-01.bioscopelive.com%2Fout%2Fv1%2F60e7608404004b1186261497b404630b%2Findex_1.m3u8
+https://hls.diptom3ow.workers.dev/r/https%3A%2F%2Ffifa-stream-01.bioscopelive.com%2Fout%2Fv1%2F60e7608404004b1186261497b404630b%2Findex_2.m3u8
 #EXTINF:-1 group-title="Bangladeshi",ToFFE world cup
 https://sports.abdullahroman276.workers.dev/live/roman368/01726686368/459.m3u8LWNkbjAxLWxpdmUudG9mZmVlbGl2ZS5jb20~Signature=AeQsclD8E49TKJaioAwFJMUnGas8vyrFS1xrDoQoYIpVkaFGVB9nWJHjO_eeWQ5uRmmQuoCmVj_sgwUqfi-Z-ci98FUD
-#EXTINF:-1 group-title="Bangladeshi",T SPORTS 
-https://flussonic.deltainfonet.com/01_Tsports_HD/tracks-v1a1/mono.m3u8 
+#EXTINF:-1 group-title="Bangladeshi",T SPORTS
+https://flussonic.deltainfonet.com/01_Tsports_HD/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Bangladeshi",SOMOY TV FIFA
 https://live.thebosstv.com:30443/dwlive/Somoy-TV/chunks.m3u8
 #EXTINF:-1 group-title="Bangladeshi",i-Screen
@@ -13,11 +13,11 @@ https://cricxtv.fun/isceen.php?file=https://tc-sg.rockstreamer.com/v1/019ed91616
 https://lstv-web.pages.dev/api/proxy?url=https://tv.beyondtaxconsultants.com/api/robi/lps/http://198.195.239.50:8095/ptv/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Bangladeshi",FAST SPORTS
 https://a3285273028-s80718.cdn.ngenix.net/hls/CH_FAST_SPORTSHD/video_1920x1080_avc1/playlist.m3u8?profile=web_auto
-#EXTINF:-1 group-title="Sports",SOCO LIVE FIFA 
+#EXTINF:-1 group-title="Sports",SOCO LIVE FIFA
 https://pull.niues.live/live/stream-9912108_lhd.m3u8?auth_key=1782234982-0-0-2455aafc2b9f6b9d2cd3228dabb3d198
 #EXTINF:-1 group-title="Sports",BEIN SPORT DIRECT
 https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8
-#EXTINF:-1 group-title="Sports",26 Fox 
+#EXTINF:-1 group-title="Sports",26 Fox
 https://andro.evrenesoglu57.click/checklist/androstreamliveexn1.m3u8
 #EXTINF:-1 group-title="Sports",CORRA CiTY 360
 https://qw.besea.website/yodo1_720/index.m3u8
@@ -27,7 +27,7 @@ https://andro.evrenesoglu57.click/checklist/androstreamlivetrt1.m3u8
 https://s3.us-east-2.amazonaws.com/cdna900/live/stream/720p/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Sports",FUSBAAL TV- 4K
 https://edge22.776740.ir.cdn.ir/hls2/sport.m3u8
-#EXTINF:-1 group-title="Sports", BEIN ARABIC 
+#EXTINF:-1 group-title="Sports",BEIN ARABIC
 https://andro.evrenesoglu57.click/checklist/androstreamliveexn4.m3u8
 #EXTINF:-1 group-title="Sports",BeIN Sports Direct
 https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8
@@ -41,7 +41,7 @@ https://andro.226503.xyz/checklist/androstreamlivebs1.m3u8
 https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/Caze_TV.m3u8
 #EXTINF:-1 group-title="Sports",Dazn Direct
 https://1nyaler.streamhostingcdn.top/stream/94/index.m3u8
-#EXTINF:-1 group-title="Sports",ARG VS CAPE 
+#EXTINF:-1 group-title="Sports",ARG VS CAPE
 https://andro.evrenesoglu57.click/checklist/androstreamliveexn4.m3u8
 #EXTINF:-1 group-title="Sports",D Sports
 https://1nyaler.streamhostingcdn.top/stream/106/index.m3u8
