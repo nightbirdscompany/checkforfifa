@@ -1,6 +1,7 @@
 import json
 import requests
 import sys
+import os
 
 JSON_URL = "https://raw.githubusercontent.com/siamahmeed563-lab/Siam-areana/refs/heads/main/channels.json"
 
@@ -14,8 +15,15 @@ def generate_playlist():
         response.raise_for_status()
         data = response.json()
         print(f"✅ Success! Found {len(data.get('bangladeshi', []))} Bangladeshi channels and {len(data.get('sports', []))} sports channels")
+    except requests.exceptions.RequestException as e:
+        print(f"❌ Network error: {e}")
+        return False
+    except json.JSONDecodeError as e:
+        print(f"❌ JSON decode error: {e}")
+        print(f"Response content preview: {response.text[:200]}")
+        return False
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f"❌ Unexpected error: {e}")
         return False
 
     lines = ['#EXTM3U']
@@ -29,6 +37,8 @@ def generate_playlist():
             url = ch.get('url', '').strip()
             if url and name:
                 group_title = group.capitalize()
+                # Clean up URL - remove any trailing spaces
+                url = url.strip()
                 lines.append(f'#EXTINF:-1 group-title="{group_title}",{name}')
                 lines.append(url)
                 count += 1
@@ -40,16 +50,39 @@ def generate_playlist():
         return False
     
     try:
+        # Create the content
+        content = '\n'.join(lines) + '\n'
+        
+        # Write to file
         with open('playlist.m3u', 'w', encoding='utf-8') as f:
-            content = '\n'.join(lines) + '\n'
             f.write(content)
+        
         print(f"✅ playlist.m3u generated with {count} channels!")
         print(f"File size: {len(content)} bytes")
-        return True
+        
+        # Verify file was created
+        if os.path.exists('playlist.m3u'):
+            print(f"✅ File exists at: {os.path.abspath('playlist.m3u')}")
+            return True
+        else:
+            print("❌ File was not created!")
+            return False
+            
     except Exception as e:
         print(f"❌ Error writing playlist: {e}")
         return False
 
 if __name__ == "__main__":
+    print("=" * 50)
+    print("Starting playlist generation...")
+    print("=" * 50)
+    
     success = generate_playlist()
-    sys.exit(0 if success else 1)
+    
+    print("=" * 50)
+    if success:
+        print("✅ SUCCESS! Playlist generated.")
+        sys.exit(0)
+    else:
+        print("❌ FAILED! Playlist not generated.")
+        sys.exit(1)
