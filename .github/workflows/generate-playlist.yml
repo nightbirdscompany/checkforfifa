@@ -31,37 +31,74 @@ jobs:
       - name: Install dependencies
         run: |
           pip install requests
+          pip install --upgrade pip
+
+      - name: List files before generation
+        run: |
+          echo "📁 Current directory contents:"
+          ls -la
+          echo "📁 Python files:"
+          ls -la *.py || echo "No Python files found"
 
       - name: Generate playlist
         run: |
           python3 generate_playlist.py
-          echo "Exit code: $?"
+          EXIT_CODE=$?
+          echo "Exit code: $EXIT_CODE"
+          if [ $EXIT_CODE -ne 0 ]; then
+            echo "❌ Script failed with exit code $EXIT_CODE"
+            exit $EXIT_CODE
+          fi
 
-      - name: Check if playlist was created
+      - name: Verify playlist was created
         run: |
+          echo "📁 Files after generation:"
+          ls -la
+          
           if [ -f "playlist.m3u" ]; then
             echo "✅ playlist.m3u exists"
-            echo "Content preview:"
-            head -n 5 playlist.m3u
+            echo "📄 Content preview (first 10 lines):"
+            head -n 10 playlist.m3u
+            echo "📊 Total lines:"
             wc -l playlist.m3u
           else
             echo "❌ playlist.m3u NOT created!"
+            echo "📁 All files in directory:"
+            ls -la
             exit 1
           fi
 
-      - name: Commit and push
+      - name: Commit and push playlist
         run: |
+          # Check if playlist.m3u exists
+          if [ ! -f "playlist.m3u" ]; then
+            echo "❌ playlist.m3u not found!"
+            exit 1
+          fi
+          
+          # Configure git
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Always update the file
+          # Add the file
           git add playlist.m3u
           
-          # Try to commit, ignore if no changes
-          if git commit -m "Auto: update playlist.m3u [skip ci]"; then
-            echo "✅ Committed successfully"
-            git push
-            echo "✅ Pushed successfully"
-          else
+          # Check if there are changes
+          if git diff --cached --quiet; then
             echo "ℹ️ No changes to commit"
+          else
+            echo "📝 Changes detected, committing..."
+            git commit -m "Auto: update playlist.m3u [skip ci]"
+            echo "✅ Committed successfully"
+            
+            # Push with token
+            git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
+            echo "✅ Pushed successfully"
           fi
+
+      - name: Upload playlist as artifact (optional)
+        uses: actions/upload-artifact@v3
+        with:
+          name: playlist
+          path: playlist.m3u
+          if-no-files-found: error
