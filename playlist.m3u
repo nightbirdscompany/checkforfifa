@@ -9,8 +9,8 @@ https://flussonic.deltainfonet.com/01_Tsports_HD/tracks-v1a1/mono.m3u8
 https://live.thebosstv.com:30443/dwlive/Somoy-TV/chunks.m3u8
 #EXTINF:-1 group-title="Bangladeshi",i-Screen
 https://cricxtv.fun/isceen.php?file=https://tc-sg.rockstreamer.com/v1/019ed91616121ea540a8171c8e801f/019ed92ac80315fc600b1796d4ad8b/tc_sg_1_1080p.m3u8
-#EXTINF:-1 group-title="Bangladeshi",PTV
-https://lstv-web.pages.dev/api/proxy?url=https://tv.beyondtaxconsultants.com/api/robi/lps/http://198.195.239.50:8095/ptv/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Bangladeshi",TAPMAD
+https://saseries.akamaized.net/hls/live/2110097/UFC-20-3827e1/level_0.m3u8/mono.m3u8
 #EXTINF:-1 group-title="Bangladeshi",FAST SPORTS
 https://a3285273028-s80718.cdn.ngenix.net/hls/CH_FAST_SPORTSHD/video_1920x1080_avc1/playlist.m3u8?profile=web_auto
 #EXTINF:-1 group-title="Sports",SOCO LIVE FIFA
