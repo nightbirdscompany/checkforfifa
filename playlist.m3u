@@ -1,36 +1,36 @@
 #EXTM3U
 #EXTINF:-1 group-title="Bangladeshi",BIOSCOPE+(FIFA)
 https://hls.diptom3ow.workers.dev/r/https%3A%2F%2Ffifa-stream-01.bioscopelive.com%2Fout%2Fv1%2F60e7608404004b1186261497b404630b%2Findex_2.m3u8
-#EXTINF:-1 group-title="Bangladeshi",TAPMAD
-https://saseries.akamaized.net/hls/live/2110097/ICCt20-tapmad/level_1.m3u8
+#EXTINF:-1 group-title="Bangladeshi",BTV
+https://biostartvworld.pages.dev/api/btv.m3u8?key=aHR0cHM6Ly90di5iZXlvbmR0YXhjb25zdWx0YW50cy5jb20vYXBpL3Byb3h5P3VybD1odHRwOi8vMTAzLjE2NS45My4zMTo4MDk1L2J0di90cmFja3MtdjFhMS9tb25vLm0zdTg
 #EXTINF:-1 group-title="Bangladeshi",T SPORTS
-https://flussonic.deltainfonet.com/01_Tsports_HD/tracks-v1a1/mono.m3u8
+https://biostartvworld.pages.dev/api/t-sports.m3u8?key=aHR0cHM6Ly90di5iZXlvbmR0YXhjb25zdWx0YW50cy5jb20vYXBpL3Byb3h5P3VybD1odHRwOi8vMTAzLjE2NS45My4zMTo4MDk1L3RzcG9ydHMvdHJhY2tzLXYxYTFhMi9tb25vLm0zdTg
 #EXTINF:-1 group-title="Bangladeshi",SOMOY TV FIFA
 https://live.thebosstv.com:30443/dwlive/Somoy-TV/chunks.m3u8
-#EXTINF:-1 group-title="Bangladeshi",SOCO WROLD CUP
-https://pull.niues.live/live/stream-9912060_lhd.m3u8?auth_key=1783366103-0-0-22529c3f65969c7cdd810209a64927e6
+#EXTINF:-1 group-title="Bangladeshi",CC TV 5 WROLD CUP
+https://www.rtmpcdn.com/live/cctv5.m3u8
 #EXTINF:-1 group-title="Bangladeshi",mansun sport
+https://biostartvworld.pages.dev/api/mahsun-sports.m3u8?key=aHR0cHM6Ly9hbmRyby4yMjY1MDMueHl6L2NoZWNrbGlzdC9hbmRyb3N0cmVhbWxpdmViczEubTN1OA
+#EXTINF:-1 group-title="Bangladeshi",FOX 26
 https://andro.evrenesoglu57.click/checklist/androstreamliveexn1.m3u8
-#EXTINF:-1 group-title="Bangladeshi",FAST SPORTS
-https://a3285273028-s80718.cdn.ngenix.net/hls/CH_FAST_SPORTSHD/video_1920x1080_avc1/playlist.m3u8?profile=web_auto
-#EXTINF:-1 group-title="Sports",SOCO LIVE FIFA
-https://pull.niues.live/live/stream-9912108_lhd.m3u8?auth_key=1782234982-0-0-2455aafc2b9f6b9d2cd3228dabb3d198
+#EXTINF:-1 group-title="Sports",ORF FIFA
+https://andro.evrenesoglu57.click/checklist/androstreamliveexn6.m3u8
 #EXTINF:-1 group-title="Sports",BEIN SPORT DIRECT
 https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8
-#EXTINF:-1 group-title="Sports",26 Fox
-https://andro.evrenesoglu57.click/checklist/androstreamliveexn1.m3u8
+#EXTINF:-1 group-title="Sports",Corra cuty 720
+https://cu.freshfin.site/mercaz1_720/index.m3u8
 #EXTINF:-1 group-title="Sports",soco 2
 https://pull.niues.live/live/stream-9912060_lhd.m3u8?auth_key=1783366103-0-0-22529c3f65969c7cdd810209a64927e6
 #EXTINF:-1 group-title="Sports",TRT 1
 https://andro.evrenesoglu57.click/checklist/androstreamlivetrt1.m3u8
 #EXTINF:-1 group-title="Sports",BEin 1 max
-https://s3.us-east-2.amazonaws.com/cdna900/live/stream/720p/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Sports",FUSBAAL TV- 4K
-https://edge22.776740.ir.cdn.ir/hls2/sport.m3u8
+https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8
+#EXTINF:-1 group-title="Sports",corra city 360
+https://cu.freshfin.site/mercaz1_360/index.m3u8
 #EXTINF:-1 group-title="Sports",BEIN ARABIC
 https://andro.evrenesoglu57.click/checklist/androstreamliveexn4.m3u8
 #EXTINF:-1 group-title="Sports",BeIN Sports Direct
-https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8
+https://edge22.776740.ir.cdn.ir/hls2/sport.m3u8
 #EXTINF:-1 group-title="Sports",TPV SPORTS
 https://1nyaler.streamhostingcdn.top/stream/89/index.m3u8
 #EXTINF:-1 group-title="Sports",CORAX 90
