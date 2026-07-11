@@ -4,7 +4,7 @@ https://hls.diptom3ow.workers.dev/r/https%3A%2F%2Ffifa-stream-01.bioscopelive.co
 #EXTINF:-1 group-title="Bangladeshi",BTV
 https://biostartvworld.pages.dev/api/btv.m3u8?key=aHR0cHM6Ly90di5iZXlvbmR0YXhjb25zdWx0YW50cy5jb20vYXBpL3Byb3h5P3VybD1odHRwOi8vMTAzLjE2NS45My4zMTo4MDk1L2J0di90cmFja3MtdjFhMS9tb25vLm0zdTg
 #EXTINF:-1 group-title="Bangladeshi",T SPORTS
-https://biostartvworld.pages.dev/api/t-sports.m3u8?key=aHR0cHM6Ly90di5iZXlvbmR0YXhjb25zdWx0YW50cy5jb20vYXBpL3Byb3h5P3VybD1odHRwOi8vMTAzLjE2NS45My4zMTo4MDk1L3RzcG9ydHMvdHJhY2tzLXYxYTFhMi9tb25vLm0zdTg
+https://m3u8-proxy-v1.jahinalamshamim.workers.dev/proxy?url=https://tv.beyondtaxconsultants.com/api/robi/lps/http://114.130.57.233:8080/TsportHD/tracks-v1a1/mono.m3u8?token=SkQuhAXZxgBan1
 #EXTINF:-1 group-title="Bangladeshi",SOMOY TV FIFA
 https://live.thebosstv.com:30443/dwlive/Somoy-TV/chunks.m3u8
 #EXTINF:-1 group-title="Bangladeshi",CC TV 5 WROLD CUP
