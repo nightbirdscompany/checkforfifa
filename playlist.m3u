@@ -1,8 +1,8 @@
 #EXTM3U
 #EXTINF:-1 group-title="Bangladeshi",BIOSCOPE+(FIFA)
 https://hls.diptom3ow.workers.dev/r/https%3A%2F%2Ffifa-stream-01.bioscopelive.com%2Fout%2Fv1%2F60e7608404004b1186261497b404630b%2Findex_2.m3u8
-#EXTINF:-1 group-title="Bangladeshi",FRA VS ESP
-https://esd.zenithez.website/ypmf1_720/index.m3u8
+#EXTINF:-1 group-title="Bangladeshi",ARG VS ENG
+https://tfxl1gwh1hcjigezdncb3fahdrmmcpf5gkce.100ycdn.com/live1.streambylivepulse.com/live/channel6/playlist.m3u8?wsSecret=3843feb764c2a2b81a5169383f8e26d4&wsABSTime=1784182501&wsSession=da91794d1c82a6518aab13e0-178413930348783&wsIPSercert=b7031d922ec6c56c5993cc6d76628bf5&wsBindIP=2&wsserid=1168262300818150876
 #EXTINF:-1 group-title="Bangladeshi",T SPORTS
 https://bdixserver.tvhunter.top/ant1009/mono.m3u8
 #EXTINF:-1 group-title="Bangladeshi",SOMOY TV FIFA
@@ -12,10 +12,10 @@ https://live01-cn-ali.bvjicd.com/live/79361366.m3u8?nocache=1784052953102
 #EXTINF:-1 group-title="Bangladeshi",mansun sport
 https://andro.evrenesoglu57.click/checklist/batutest.m3u8
 #EXTINF:-1 group-title="Bangladeshi",FOX 26
-https://andro.evrenesoglu57.click/checklist/androstreamliveexn1.m3u8
+https://co.lumicres.store/peizt2_720/index.m3u8
 #EXTINF:-1 group-title="Sports",ORF FIFA
 https://andro.evrenesoglu57.click/checklist/androstreamliveexn6.m3u8
-#EXTINF:-1 group-title="Sports",Corra city 360
+#EXTINF:-1 group-title="Sports",Corra city 720
 https://esd.zenithez.website/ypmf1_360/index.m3u8
 #EXTINF:-1 group-title="Sports",COLA Tv FiFa
 https://live05.miekgo.app/live/78905744.m3u8
