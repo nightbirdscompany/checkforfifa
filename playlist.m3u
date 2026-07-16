@@ -1,8 +1,8 @@
 #EXTM3U
 #EXTINF:-1 group-title="Bangladeshi",BIOSCOPE+(FIFA)
 https://hls.diptom3ow.workers.dev/r/https%3A%2F%2Ffifa-stream-01.bioscopelive.com%2Fout%2Fv1%2F60e7608404004b1186261497b404630b%2Findex_2.m3u8
-#EXTINF:-1 group-title="Bangladeshi",ARG VS ENG
-https://tfxl1gwh1hcjigezdncb3fahdrmmcpf5gkce.100ycdn.com/live1.streambylivepulse.com/live/channel6/playlist.m3u8?wsSecret=3843feb764c2a2b81a5169383f8e26d4&wsABSTime=1784182501&wsSession=da91794d1c82a6518aab13e0-178413930348783&wsIPSercert=b7031d922ec6c56c5993cc6d76628bf5&wsBindIP=2&wsserid=1168262300818150876
+#EXTINF:-1 group-title="Bangladeshi",TAPMAD (IND VS ENG)
+https://saseries.akamaized.net/hls/live/2110097/2356jkiL-tapmad/level_1.m3u8
 #EXTINF:-1 group-title="Bangladeshi",T SPORTS
 https://bdixserver.tvhunter.top/ant1009/mono.m3u8
 #EXTINF:-1 group-title="Bangladeshi",SOMOY TV FIFA
